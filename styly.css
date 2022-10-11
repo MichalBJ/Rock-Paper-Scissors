@@ -1,0 +1,181 @@
+		body {
+			background: #191919;
+			background-image: url("img/bubbles2.png");
+			color: #f1f525;
+			font-family: 'Kanit', sans-serif;
+			font-size: 23px;
+			text-align: center;
+
+		}
+
+		#container {
+			margin: 0px auto;
+			width: 700px;
+			position: relative;
+
+		}
+
+		 #banner > img {
+			border-radius: 5px;
+			box-shadow: 0 8px 5px rgb(0,0,0);
+			margin-top: 10px;
+		}
+
+		#text_points {
+			position: relative;
+			margin-top: 25px;
+			background: linear-gradient(90deg, rgba(25,25,25,0) 0%, rgba(50,49,49,1) 10%, rgba(71,71,71,1) 50%, rgba(50,49,49,1) 90%, rgba(25,25,25,0) 100%);
+			
+		}
+
+		#text_points > p {
+			padding-bottom: 5px;
+		}
+
+		#many_points {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+		}
+
+		#many_points > div {
+			margin: 10px 0;
+			background: linear-gradient(90deg, rgba(65,65,65,1) 0%, rgba(71,71,71,1) 10%, rgba(71,71,71,1) 50%, rgba(71,71,71,1) 90%, rgba(65,65,65,1) 100%);
+			box-shadow: 0 2px 4px rgb(0,0,0);
+		}
+
+		#many_points div:last-child {
+			grid-column: 2/4;
+			grid-row: 2/3;
+			border-radius: 10px;
+		}
+
+		#many_points > div:hover {
+			background: #656464;
+			
+		}
+
+		.selectedLevel {
+			background: #656464;
+			border: 2px solid #f1f525;
+		}
+
+
+		#game {
+			margin: 20px 0;
+			border: 4px solid #f1f525;
+			border-radius: 20px;
+			display: none;
+		}
+
+
+		#score {
+			width: 70%;
+			margin: 25px auto;
+			background: linear-gradient(90deg, rgba(25,25,25,0) 0%, rgba(50,49,49,1) 10%, rgba(71,71,71,1) 50%, rgba(50,49,49,1) 90%, rgba(25,25,25,0) 100%);
+			font-size: 35px;
+			
+		}
+
+		#score > div {
+			display: inline-block;
+		}
+
+		#score div:first-child, #container #score div:last-child {
+			margin: auto auto;
+			width: 30%;
+		}
+
+		#score div:first-child {
+			text-align: right;
+		}
+
+		#score div:last-child {
+			text-align: left;
+		}
+
+		#score div:nth-child(2) {
+			width: 35%;
+			margin: auto auto;
+			background: #5e5e5e;
+			border-radius: 10px;
+		}
+
+		#final_choice {
+			font-size: 50px;
+			text-align: center;
+		}
+
+		#final_choice div {
+			display: inline;
+			border-radius: 15px;
+			margin: 0 45px;
+			
+		}
+
+		#final_choice div img {
+			border-radius: 15px;
+		}
+
+		.scoreAnimation {
+			color: #f1f525;
+			animation-name: score;
+			animation-duration: 0.8s;
+		}
+
+		@keyframes score {
+			0% {color: red;}
+			100% {color: #f1f525;}
+		}
+
+		.animation {
+			content: url('img/rock_choice.jpg');
+			animation-name: pc_choice;
+  			animation-duration: 1s;
+		}
+
+		@keyframes pc_choice {
+			0% {content: url('img/rock_choice.jpg');}
+			10% {content: url('img/scissors_choice.jpg');}
+			20% {content: url('img/paper_choice.jpg');}
+			30% {content: url('img/rock_choice.jpg');}
+			40% {content: url('img/scissors_choice.jpg');}
+			50% {content: url('img/paper_choice.jpg');}
+			60% {content: url('img/rock_choice.jpg');}
+			70% {content: url('img/scissors_choice.jpg');}
+			80% {content: url('img/paper_choice.jpg');}
+			90% {content: url('img/rock_choice.jpg');}
+			100% {content: url('img/scissors_choice.jpg');}
+		}
+
+		#choice_box div {
+			display: inline;
+			margin: 0 15px;
+		}
+
+		#choice_box div img {
+			border-radius: 15px;
+			margin: 15px 3px;
+			box-sizing: border-box;
+		}
+
+		#rock img:hover {
+			border: 4px solid #ffabf1;
+			
+		}
+
+		#scissors img:hover {
+			border: 4px solid #ffef50;
+		}
+
+		#paper img:hover {
+			border: 4px solid #44a7ff;
+		}
+
+		#finalResult {
+			margin: 20px 0;
+			font-size: 50px;
+			text-align: center;
+			background: linear-gradient(90deg, rgba(25,25,25,0) 0%, rgba(50,49,49,1) 10%, rgba(71,71,71,1) 50%, rgba(50,49,49,1) 90%, rgba(25,25,25,0) 100%);
+			display: none; 
+		}
